@@ -1,0 +1,231 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>سفر ریاضی ششم</title><link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet"><style>
+:root{color-scheme:dark;--bg:#120a3c;--y:#ffd23f;--g:#3ddc84;--r:#ff4f8b;--c:#7c5cff}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background-color:var(--bg)}
+body{min-height:100vh;color:#fff;font:17px/1.8 Vazirmatn,Tahoma,"Segoe UI",sans-serif;padding-bottom:env(safe-area-inset-bottom,0);background:radial-gradient(circle at 15% 10%,#5b2fd6aa,transparent 45%),radial-gradient(circle at 90% 30%,#ff4f8b66,transparent 40%),radial-gradient(circle at 30% 95%,#2de2e655,transparent 45%),linear-gradient(180deg,#1a0f55,#0c0630);background-attachment:fixed;overflow-x:hidden}
+.st{position:fixed;inset:0;pointer-events:none;z-index:0}.st b{position:absolute;width:4px;height:4px;border-radius:50%;background:#fff;animation:tw 3s ease-in-out infinite}
+@keyframes tw{50%{opacity:.15;transform:scale(.5)}}
+.fx i{position:fixed;font-style:normal;opacity:.3;font-size:2.4rem;animation:dr 14s ease-in-out infinite;pointer-events:none;z-index:0}
+.fx i:nth-child(1){top:10%;left:5%}.fx i:nth-child(2){top:28%;right:6%;animation-delay:-3s}.fx i:nth-child(3){top:60%;left:8%;animation-delay:-6s}.fx i:nth-child(4){top:78%;right:10%;animation-delay:-9s}.fx i:nth-child(5){top:45%;left:48%;animation-delay:-4s}.fx i:nth-child(6){top:90%;left:40%;animation-delay:-11s}
+@keyframes dr{50%{transform:translate(20px,-30px) rotate(20deg)}}
+.dsg{position:relative;z-index:2;text-align:center;font-weight:900;font-size:1.02rem;padding:8px 10px;padding-top:calc(8px + env(safe-area-inset-top,0));background:linear-gradient(90deg,#ff4f8b,#ffb800,#2de2e6);color:#1b1040;border-bottom:4px solid #fff;box-shadow:0 5px 0 #0005}
+#app{position:relative;z-index:1;max-width:640px;margin:0 auto;padding:10px 14px 20px}
+.hud{display:flex;justify-content:space-between;align-items:center;margin:6px 0 10px;gap:8px}
+.pill{background:#0008;border:3px solid var(--y);border-radius:999px;padding:0 16px;font-weight:900;color:var(--y);box-shadow:0 4px 0 #0006}
+.ib{background:#ffffff26;border:3px solid #fff5;border-radius:50%;width:44px;height:44px;font-size:1.3rem;cursor:pointer;color:#fff;box-shadow:0 4px 0 #0006;margin-inline-start:6px}
+.card{background:linear-gradient(160deg,#3b25a0,#27176f);border:4px solid var(--c);border-radius:32px;padding:18px 16px;box-shadow:0 10px 0 #0007,0 0 28px #0005;text-align:center;animation:pop .5s cubic-bezier(.2,1.5,.4,1)}
+@keyframes pop{from{transform:scale(.88);opacity:0}}
+@keyframes slide{from{transform:translateX(-40px);opacity:0}}
+h1{margin:4px 0;font-size:2.2rem;font-weight:900;line-height:1.3;background:linear-gradient(90deg,#ffd23f,#ff4f8b,#2de2e6,#ffd23f);background-size:200%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:sh 4s linear infinite;cursor:pointer}
+@keyframes sh{to{background-position:200%}}
+h2{margin:6px 0;font-weight:900}
+.mas{font-size:4.4rem;line-height:1.1;display:inline-block;animation:fl 2.4s ease-in-out infinite;filter:drop-shadow(0 8px 0 #0004)}
+@keyframes fl{50%{transform:translateY(-12px) rotate(-6deg)}}
+.bub{position:relative;background:#fff;color:#2a1a78;border-radius:22px;padding:6px 14px;margin:12px auto 6px;max-width:94%;font-weight:700;font-size:.98rem}
+.bub:before{content:"";position:absolute;top:-10px;right:50%;margin-right:-10px;border:10px solid transparent;border-top:0;border-bottom-color:#fff}
+input,textarea{width:100%;font:inherit;border:4px solid var(--y);border-radius:20px;padding:6px 12px;background:#120a3c;color:#fff;text-align:center;margin:8px 0;outline:0}textarea{text-align:left;direction:ltr;font-size:.8rem;border-color:#5b3fd6}
+button{font:inherit;cursor:pointer}
+.go,.sec{display:block;width:100%;border:0;border-radius:22px;padding:8px;font-weight:900;margin:10px 0;color:#2a1a78}
+.go{background:linear-gradient(180deg,#ffe36b,#ffb800);box-shadow:0 7px 0 #b97d00;font-size:1.3rem;animation:bn 1.6s ease-in-out infinite}@keyframes bn{50%{transform:scale(1.04)}}
+.sec{background:#e5e9ff;box-shadow:0 5px 0 #7d86c4}.go:active,.sec:active{transform:translateY(5px);box-shadow:none;animation:none}
+.sm{font-size:.88rem;opacity:.9}.bad{color:#ffb3c6;font-weight:900}
+.chips{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:10px}.chips span{background:#0006;border:2px solid #ffffff44;border-radius:999px;padding:0 12px;font-size:.85rem;font-weight:700}
+.tb{display:block;margin:14px auto 0;background:#ffffff1f;border:3px dashed #ffffff88;color:#fff;border-radius:999px;padding:2px 22px;font-weight:900;box-shadow:0 4px 0 #0006}
+.pts{display:inline-block;background:#0007;border:3px solid var(--y);color:var(--y);font-weight:900;border-radius:999px;padding:0 18px;font-size:1.2rem;margin:4px 0}
+.prog{height:22px;background:#120a3c;border-radius:14px;overflow:hidden;margin:8px 0;border:3px solid #fff5;position:relative}
+.prog i{display:block;height:100%;background:repeating-linear-gradient(45deg,#3ddc84 0 12px,#2fc472 12px 24px);transition:width .8s}.prog em{position:absolute;inset:0;font-style:normal;font-size:.72rem;font-weight:900;line-height:16px}
+.planets{display:flex;flex-direction:column;gap:14px;margin:14px 0}
+.pl{display:flex;align-items:center;gap:12px;text-align:right;border:4px solid var(--c);background:linear-gradient(135deg,#120a3c,#241466);color:#fff;border-radius:999px 28px 28px 999px;padding:6px 8px;box-shadow:0 7px 0 #0008;width:88%;transition:transform .15s}
+.pl:nth-child(even){align-self:flex-end;border-radius:28px 999px 999px 28px;flex-direction:row-reverse;text-align:left}
+.pl .em{flex:0 0 74px;height:74px;border-radius:50%;display:grid;place-items:center;font-size:2.6rem;background:radial-gradient(circle at 35% 30%,#fff6,var(--c) 60%);box-shadow:0 0 18px var(--c);animation:fl 3s ease-in-out infinite}
+.pl .tx{flex:1;display:flex;flex-direction:column;line-height:1.5}.pl b{font-size:1.1rem}.pl small{opacity:.85}.pl i{font-style:normal;font-weight:900;color:var(--c);font-size:.95rem}
+.pl:not(:disabled){animation:gl 2.4s ease-in-out infinite}@keyframes gl{50%{box-shadow:0 7px 0 #0008,0 0 22px var(--c)}}
+.pl:not(:disabled):active{transform:translateY(5px)}.pl.done{background:linear-gradient(135deg,#0f4a29,#1b7a43);animation:none}.pl.locked{opacity:.55;filter:grayscale(.9);animation:none}.pl:disabled{cursor:not-allowed}
+.lesson{background:#ffffff14;border:3px dashed var(--c);border-radius:24px;padding:12px;margin:10px 0;animation:slide .4s}
+.lesson h3{margin:0 0 4px;color:var(--c);font-weight:900;font-size:1.2rem}.lesson p{margin:4px 0;font-size:1rem}
+.row{display:flex;align-items:center;justify-content:center;gap:4px;flex-wrap:wrap;direction:ltr;margin:10px 0}
+.bx{display:inline-grid;place-items:center;min-width:46px;height:46px;padding:0 6px;border-radius:14px;background:var(--c);color:#1b1040;font-weight:900;font-size:1.2rem;box-shadow:0 4px 0 #0006;animation:pop .5s backwards}
+.bx.q{background:#fff;color:#2a1a78;animation:bn 1s infinite}.bx.g{background:var(--g)}.bx.p{background:var(--r)}
+.ar{font-size:.8rem;font-weight:900;color:var(--y);min-width:34px;text-align:center}
+.pgs{display:flex;gap:8px;justify-content:center;margin:8px 0}.pgs u{width:14px;height:14px;border-radius:50%;background:#ffffff33;border:2px solid #fff6}.pgs u.on{background:var(--y)}
+.nav{display:flex;gap:10px}.nav button{flex:1}
+.qt{display:flex;justify-content:space-between;align-items:center;font-weight:900}.qt span:first-child{background:var(--c);border-radius:999px;padding:0 14px;color:#1b1040;font-size:.92rem}
+.hearts{font-size:1.5rem;letter-spacing:2px}.hearts.hit{animation:sk .5s}@keyframes sk{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+.bar{height:20px;background:#120a3c;border-radius:12px;overflow:hidden;margin:10px 0 4px;border:3px solid #fff5}.bar i{display:block;height:100%;width:100%;background:linear-gradient(90deg,var(--r),var(--y),var(--g));transition:width .2s linear}
+.dots{display:flex;gap:8px;justify-content:center;margin:6px 0}.dots u{width:16px;height:16px;border-radius:50%;background:#ffffff33;border:2px solid #fff6}.dots u.on{background:var(--g);border-color:#fff}.dots u.cur{background:var(--y);border-color:#fff;animation:bn 1s infinite}.dots u.x{background:var(--r);border-color:#fff}
+.tm{display:inline-block;background:#0007;border-radius:999px;padding:0 12px;margin-inline-start:8px;color:var(--y);font-weight:900}.tm.hot{background:var(--r);color:#fff;animation:bn .5s infinite}
+.q{font-size:1.28rem;margin:12px 0;font-weight:900;background:#ffffff18;border-radius:22px;padding:10px 12px;line-height:1.9}
+.ops{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.op{border:0;border-radius:24px;padding:14px 4px;font-size:1.5rem;font-weight:900;color:#fff;box-shadow:0 7px 0 #0008;position:relative;animation:pop .5s backwards}
+.op:nth-child(2){animation-delay:.07s}.op:nth-child(3){animation-delay:.14s}.op:nth-child(4){animation-delay:.21s}
+.op:before{content:attr(data-s);position:absolute;top:2px;right:10px;font-size:.85rem;opacity:.75}
+.o0{background:linear-gradient(180deg,#4d7bff,#2f5bea)}.o1{background:linear-gradient(180deg,#ff9a3d,#e8731a)}.o2{background:linear-gradient(180deg,#1fcfc9,#0a9a96)}.o3{background:linear-gradient(180deg,#ff6aa6,#c93a74)}
+.op:active{transform:translateY(6px);box-shadow:none}.op.right{background:linear-gradient(180deg,#46e08d,#1e8f52);animation:pu .6s}.op.wrong{background:#555;opacity:.75;animation:sk .4s}@keyframes pu{50%{transform:scale(1.1)}}
+.ops.tf .op{font-size:1.6rem;padding:20px 4px}
+#fb{margin-top:14px;font-weight:900;font-size:1.1rem}#fb.ok{color:var(--g)}#fb.bad{color:#ffb3c6}
+.why{background:#fff;color:#2a1a78;border-radius:20px;padding:8px 14px;margin:10px 0;font-weight:700;font-size:.98rem;text-align:right;animation:pop .4s}
+input[type=checkbox]{width:26px;height:26px;margin:0 0 0 8px;vertical-align:middle;accent-color:#ffd23f}
+.cons{display:block;background:#ffffff1c;border:3px solid var(--y);border-radius:20px;padding:8px 12px;margin:10px 0;text-align:right;font-weight:700;font-size:.92rem;cursor:pointer}
+#cam{position:fixed;left:10px;bottom:10px;z-index:20;width:92px;border-radius:14px;overflow:hidden;border:3px solid var(--r);box-shadow:0 4px 0 #0008;background:#000}
+#cam video{display:block;width:100%;height:70px;object-fit:cover;transform:scaleX(-1)}#cam span{position:absolute;top:3px;right:5px;font-size:.62rem;font-weight:900;color:#fff;background:#e0194f;border-radius:8px;padding:0 6px;animation:bn 1s infinite}
+.cf{position:fixed;top:60vh;font-size:2rem;pointer-events:none;animation:up 1.8s ease-out forwards;z-index:9}@keyframes up{to{transform:translateY(-65vh) rotate(90deg);opacity:0}}
+.stars{font-size:2.4rem;letter-spacing:6px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:12px 0}.stats div{background:#120a3c;border:2px solid #5b3fd6;border-radius:16px;padding:4px 2px;font-size:.78rem}.stats b{display:block;font-size:1.4rem;color:var(--y)}
+.tw{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.85rem}th,td{border:1px solid #5b3fd6;padding:2px 6px}tr:nth-child(even) td{background:#ffffff0a}th{background:#2f5bea}
+</style></head><body><div class=st id=st></div><div class=fx><i>🪐</i><i>⭐</i><i>🚀</i><i>🌙</i><i>☄️</i><i>✨</i></div><div class=dsg>🎨 طراح: اکبر اللهوردی 🎨</div><div id="app"></div><button class=tb onclick="location.hash='#teacher';route()">👩‍🏫 ورود معلم</button><div style="height:20px"></div><script>
+const SECRET="mp-math6-p15-akbar-x9K",TPH="4fd8aa64719c1c662a6b49f81079c17efba07b4e3754400617ad6c8ecf4459e1",TL=60,LIVES=3,NQ=5,CAM=true;
+const ch=(a,op,cl)=>`<div class=row>${a.map((x,i)=>(i?`<span class=ar>${op||''}</span>`:'')+`<b class="bx ${x==='؟'?'q':cl||''}" style="animation-delay:${i*.12}s">${x}</b>`).join('')}</div>`;
+const T=[
+["🪐","الگوهای عددی","#2de2e6",[
+`<h3>🔁 الگو یعنی چی؟</h3><p>الگو یعنی یک «قانون تکرار». اگر قانون را پیدا کنی، همه‌ی جمله‌های بعدی را می‌دانی!</p>${ch(['۳','۷','۱۱','۱۵','؟'],'+۴')}<p>هر بار <b>۴ تا</b> اضافه می‌شود، پس جمله‌ی بعدی ۱۵ + ۴ = ۱۹ است.</p>`,
+`<h3>✖️ الگوی ضربی و مربعی</h3>${ch(['۲','۶','۱۸','؟'],'×۳','p')}<p>اینجا هر جمله <b>۳ برابر</b> قبلی است.</p>${ch(['۱','۴','۹','۱۶','؟'],'','g')}<p>اینها مربع کامل‌اند: ۱×۱، ۲×۲، ۳×۳، ... 🎯</p><p>🔥 ترفند: برای شکل‌های چوب‌کبریتی، ببین هر شکل چند چوب بیشتر می‌شود!</p>`],
+[["۳، ۷، ۱۱، ۱۵، ... جمله‌ی بعدی کدام است؟",["۱۸","۱۹","۲۰","۲۳"],1,"هر بار ۴ تا اضافه می‌شود: ۱۵ + ۴ = ۱۹"],
+["۲، ۶، ۱۸، ۵۴، ... جمله‌ی بعدی کدام است؟",["۱۰۸","۷۲","۱۶۲","۱۳۵"],2,"هر جمله ۳ برابر قبلی است: ۵۴ × ۳ = ۱۶۲"],
+["در الگوی ۵، ۱۰، ۱۵، ۲۰، ... جمله‌ی دهم چند است؟",["۴۵","۵۰","۵۵","۶۰"],1,"جمله‌ی n‌ام برابر ۵ × n است؛ پس ۵ × ۱۰ = ۵۰"],
+["۱، ۴، ۹، ۱۶، ... جمله‌ی بعدی کدام است؟",["۲۰","۲۴","۲۵","۳۶"],2,"مربع کامل‌ها: ۱×۱، ۲×۲، ۳×۳، ۴×۴ ⇒ ۵×۵ = ۲۵"],
+["با چوب کبریت شکل می‌سازیم: شکل اول ۴ چوب، شکل دوم ۷ چوب، شکل سوم ۱۰ چوب. شکل ششم چند چوب دارد؟",["۱۶","۱۸","۱۹","۲۲"],2,"هر شکل ۳ چوب بیشتر دارد: ۴، ۷، ۱۰، ۱۳، ۱۶، ۱۹"]]],
+["🚀","مضرب و شمارنده","#ff9f1c",[
+`<h3>🪜 مضرب یعنی پله‌های پرشی</h3><p>مضرب‌های یک عدد، همان جدول ضرب آن عدد است.</p>${ch(['۷','۱۴','۲۱','۲۸','؟'],'+۷')}<p>پس ۳۵ هم مضرب ۷ است. مضرب‌ها همیشه ادامه دارند!</p>`,
+`<h3>🧩 شمارنده یعنی عددهای تقسیم‌کننده</h3><p>شمارنده‌های ۱۲ را با جفت‌ها پیدا کن:</p>${ch(['۱×۱۲','۲×۶','۳×۴'],'','g')}<p>پس شمارنده‌های ۱۲ می‌شود: ۱، ۲، ۳، ۴، ۶، ۱۲ (۶ تا)</p><p>🎯 <b>ک.م.م</b>: کوچک‌ترین مضرب مشترک | <b>ب.م.م</b>: بزرگ‌ترین شمارنده‌ی مشترک</p>`],
+[["کدام عدد مضرب ۷ است؟",["۵۴","۵۰","۴۲","۴۴"],2,"۷ × ۶ = ۴۲"],
+["عدد ۱۲ چند شمارنده دارد؟",["۴","۵","۶","۸"],2,"۱، ۲، ۳، ۴، ۶ و ۱۲ ← ۶ شمارنده"],
+["کدام عدد شمارنده‌ی ۲۴ نیست؟",["۸","۶","۹","۱۲"],2,"۲۴ ÷ ۹ باقی‌مانده دارد. اما ۲۴ = ۸×۳ = ۶×۴ = ۱۲×۲"],
+["کوچک‌ترین مضرب مشترک ۴ و ۶ کدام است؟",["۱۲","۸","۲۴","۱۸"],0,"مضرب‌های ۴: ۴، ۸، ۱۲، ... مضرب‌های ۶: ۶، ۱۲، ... پس ۱۲"],
+["بزرگ‌ترین شمارنده‌ی مشترک ۱۸ و ۲۴ کدام است؟",["۲","۳","۶","۱۲"],2,"شمارنده‌های ۱۸: ۱، ۲، ۳، ۶، ۹، ۱۸ و شمارنده‌های ۲۴ تا ۶ هم شریک‌اند ⇒ ۶"]]],
+["⭐","بخش‌پذیری","#ff4f8b",[
+`<h3>🕵️ کارآگاه رقم یکان</h3><p>برای ۲، ۵ و ۱۰ فقط به <b>رقم یکان</b> نگاه کن:</p>${ch(['۲: یکان زوج','۵: یکان ۰ یا ۵','۱۰: یکان ۰'],'','p')}<p>مثلاً ۳۴۰ هم بر ۲، هم بر ۵ و هم بر ۱۰ بخش‌پذیر است ✅</p>`,
+`<h3>➕ ترفند جمع رقم‌ها</h3><p>برای ۳ و ۹، رقم‌ها را با هم جمع کن:</p>${ch(['۱','+','۲','+','۳','=','۶'],'','g')}<p>۶ بر ۳ بخش‌پذیر است، پس ۱۲۳ هم هست. اگر جمع رقم‌ها بر ۹ بخش‌پذیر باشد، عدد بر ۹ بخش‌پذیر است (مثلاً ۷۲۹: ۷+۲+۹ = ۱۸) 🎉</p>`],
+[["کدام عدد بر ۳ بخش‌پذیر است؟",["۱۲۴","۱۲۵","۱۲۳","۱۲۷"],2,"۱ + ۲ + ۳ = ۶ و ۶ بر ۳ بخش‌پذیر است"],
+["کدام عدد بر ۹ بخش‌پذیر است؟",["۷۲۹","۷۲۱","۷۲۳","۷۲۵"],0,"۷ + ۲ + ۹ = ۱۸ و ۱۸ بر ۹ بخش‌پذیر است"],
+["به جای ؟ کدام رقم بنویسیم تا عدد ۴؟۵ بر ۳ بخش‌پذیر شود؟",["۱","۲","۳","۴"],2,"۴ + ؟ + ۵ = ۹ + ؟ باید مضرب ۳ شود. پس ؟ = ۳ و جمع می‌شود ۱۲"],
+["کدام عدد هم بر ۲ و هم بر ۵ بخش‌پذیر است؟",["۳۴۵","۲۵۲","۳۴۰","۱۲۵"],2,"رقم یکان باید صفر باشد"],
+["«عدد ۱۰۸ بر ۹ بخش‌پذیر است.»",["صحیح","غلط"],0,"۱ + ۰ + ۸ = ۹ و ۹ بر ۹ بخش‌پذیر است"]]],
+["🌙","عدد اول و تجزیه","#3ddc84",[
+`<h3>💎 عدد اول، عدد خاص!</h3><p>عدد اول فقط دو شمارنده دارد: ۱ و خودش.</p>${ch(['۲','۳','۵','۷','۱۱','۱۳'],'','g')}<p>عددی که بیشتر شمارنده دارد «مرکب» است، مثل ۹ یا ۱۵. و عدد ۲ تنها عدد اول زوج است 🏆</p>`,
+`<h3>🌳 درخت تجزیه</h3><p>هر عدد مرکب را می‌شود به ضرب عددهای اول شکست:</p>${ch(['۳۰','=','۲','×','۱۵'],'','p')}${ch(['۱۵','=','۳','×','۵'],'','p')}<p>پس ۳۰ = ۲ × ۳ × ۵ 🌟</p>`],
+[["کدام عدد اول است؟",["۲۱","۲۷","۳۳","۲۹"],3,"۲۹ فقط بر ۱ و خودش بخش‌پذیر است"],
+["چند عدد اول کوچک‌تر از ۲۰ داریم؟",["۶","۷","۸","۹"],2,"۲، ۳، ۵، ۷، ۱۱، ۱۳، ۱۷ و ۱۹ ← ۸ عدد"],
+["تجزیه‌ی عدد ۳۰ به عامل‌های اول کدام است؟",["۲×۳×۵","۲×۱۵","۳×۱۰","۵×۶"],0,"۲ و ۳ و ۵ هر سه اول‌اند و ضربشان ۳۰ می‌شود"],
+["«تنها عدد اول زوج، عدد ۲ است.»",["صحیح","غلط"],0,"هر عدد زوج دیگر دست‌کم بر ۲ هم بخش‌پذیر است، پس اول نیست"],
+["۳۶ شاخه گل را در دسته‌های مساوی می‌بندیم تا چیزی اضافه نماند. کدام دسته‌بندی ممکن نیست؟",["۴ تایی","۶ تایی","۸ تایی","۹ تایی"],2,"۳۶ ÷ ۸ باقی‌مانده دارد؛ ۳۶ = ۴×۹ = ۶×۶"]]]];
+const OKM=["آفرین پسر! 🎉","عالی بود قهرمان! 🌟","تو ستاره‌ی ریاضی هستی! ⭐","وای چه سریع! 🚀","فوق‌العاده‌ای! 🏆","دمت گرم! 💥"];
+const $=s=>document.querySelector(s),fa=n=>String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]),pick=a=>a[Math.floor(Math.random()*a.length)];
+function h(s){let a=0xdeadbeef,b=0x41c6ce57;for(let i=0;i<s.length;i++){const c=s.charCodeAt(i);a=Math.imul(a^c,2654435761);b=Math.imul(b^c,1597334677)}a=Math.imul(a^(a>>>16),2246822507)^Math.imul(b^(b>>>13),3266489909);b=Math.imul(b^(b>>>16),2246822507)^Math.imul(a^(a>>>13),3266489909);return(4294967296*(2097151&b)+(a>>>0)).toString(36)}
+let mem=null;const store={get(k){try{return localStorage.getItem(k)}catch(e){return k==='m6_s'?mem:null}},set(k,v){try{localStorage.setItem(k,v)}catch(e){if(k==='m6_s')mem=v}}};
+let S=null,muted=store.get('m6_m')==='1',music=store.get('m6_mu')!=='0',tk=null,lock=false;
+const mac=o=>h(JSON.stringify({...o,mac:0})+SECRET);
+function load(){try{const r=JSON.parse(store.get('m6_s')||'null');if(!r)return null;if(r.mac!==mac(r)){r.tamper=1;r.st.forEach(s=>{if(s.s!=='done')s.s='locked'});r.cur=null}return r}catch(e){return null}}
+function save(){S.mac=0;S.mac=mac(S);store.set('m6_s',JSON.stringify(S))}
+const now=()=>{const n=Math.max(Date.now(),S&&S.seen||0);if(S)S.seen=n;return n};
+(function(){const s=$('#st');for(let i=0;i<40;i++){const b=document.createElement('b');b.style.left=Math.random()*100+'%';b.style.top=Math.random()*100+'%';b.style.animationDelay=Math.random()*3+'s';s.appendChild(b)}})();
+/* audio */
+let ac=null,bg=null,bi=0;
+function ctx(){ac=ac||new(window.AudioContext||window.webkitAudioContext)();if(ac.state==='suspended')ac.resume();return ac}
+function beep(f,d,ty,v,t0){if(muted)return;try{const a=ctx(),o=a.createOscillator(),g=a.createGain();o.type=ty||'sine';o.frequency.value=f;g.gain.value=v||.15;o.connect(g);g.connect(a.destination);const t=a.currentTime+(t0||0);o.start(t);g.gain.exponentialRampToValueAtTime(.001,t+d);o.stop(t+d)}catch(e){}}
+const SC=[262,294,330,392,440,523,440,392,330,294],BASS=[131,131,196,196,175,175,196,196];
+function bgm(){if(bg){clearInterval(bg);bg=null}if(muted||!music)return;bg=setInterval(()=>{if(muted||!music)return;const f=SC[bi%SC.length];beep(f,.35,'triangle',.035);if(bi%2===0)beep(BASS[(bi/2)%BASS.length|0],.5,'sine',.04);bi++},260)}
+function say(t){if(muted||!window.speechSynthesis)return;try{speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(t);u.lang='fa-IR';u.pitch=1.7;u.rate=.95;const v=speechSynthesis.getVoices().find(v=>/^fa/i.test(v.lang));if(v)u.voice=v;speechSynthesis.speak(u)}catch(e){}}
+function mute(){muted=!muted;store.set('m6_m',muted?'1':'0');if(muted&&window.speechSynthesis)speechSynthesis.cancel();bgm();hudr()}
+function mus(){music=!music;store.set('m6_mu',music?'1':'0');bgm();hudr()}
+function hudr(){const e=$('#hb');if(e)e.innerHTML=`<button class=ib onclick="mus()">${music?'🎵':'🎶'}</button><button class=ib onclick="mute()">${muted?'🔇':'🔊'}</button>`}
+function boom(n){for(let i=0;i<(n||16);i++){const e=document.createElement('span');e.className='cf';e.textContent=['⭐','🎉','🚀','✨','🪐','🎈','🏆'][i%7];e.style.left=(6+Math.random()*88)+'vw';e.style.animationDelay=Math.random()*.4+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),2300)}}
+const app=()=>$('#app');
+const total=()=>S.st.reduce((a,s)=>a+s.sc,0);
+function hud(){return `<div class=hud><span class=pill>${S?'⭐ '+fa(total())+' / ۲۰':'🧮 ریاضی ششم'}</span><span id=hb></span></div>`}
+function paint(html){app().innerHTML=hud()+html;hudr()}
+/* camera proctoring */
+let stream=null,rec=null,chunks=[],vsaved=false,camErr='';
+function camMsg(e){const n=e&&e.name||'';let inif=false;try{inif=window.top!==window.self}catch(x){inif=true}
+ if(location.protocol==='content:'||location.protocol==='file:'&&/Android/i.test(navigator.userAgent))return 'فایل مستقیم از حافظه‌ی گوشی باز شده و مرورگر برای چنین آدرسی دوربین را اجازه نمی‌دهد. این بازی باید از یک لینک اینترنتی (https) باز شود؛ لینک را از معلم بگیر.';
+ if(!window.isSecureContext&&location.protocol!=='file:')return 'این صفحه از راه امن (https) باز نشده است، پس مرورگر دوربین را قفل کرده. فایل را روی یک آدرس https بگذار یا در Chrome بازش کن.';
+ if(inif)return 'این صفحه داخل یک پنجره‌ی پیش‌نمایش (مثلاً داخل برنامه‌ی چت) باز شده و آنجا دوربین مجاز نیست. فایل را دانلود کن و مستقیم در Chrome یا Safari باز کن.';
+ if(!navigator.mediaDevices)return 'این مرورگر دوربین را پشتیبانی نمی‌کند (شاید داخل برنامه‌ی پیام‌رسان باز شده). فایل را در Chrome یا Safari باز کن.';
+ if(!window.MediaRecorder)return 'این مرورگر قابلیت فیلم‌برداری ندارد. Chrome یا نسخه‌ی جدید Safari را امتحان کن.';
+ if(n==='NotAllowedError'||n==='SecurityError')return 'اجازه‌ی دوربین داده نشد. روی آیکن قفل یا دوربین کنار آدرس بزن، دوربین را «اجازه» بده و دوباره امتحان کن.';
+ if(n==='NotFoundError'||n==='OverconstrainedError')return 'دوربینی روی این دستگاه پیدا نشد.';
+ if(n==='NotReadableError')return 'دوربین دست یک برنامه‌ی دیگر است. آن برنامه را ببند و دوباره امتحان کن.';
+ return 'دوربین فعال نشد ('+(n||'خطای نامشخص')+'). صفحه را در Chrome باز کن و دوباره امتحان کن.'}
+function showErr(m){let e=$('#cerr');if(!e){e=document.createElement('div');e.id='cerr';e.className='why';e.style.background='#ffe3ea';e.style.color='#7a0f33';const c=document.querySelector('.card');(c||document.body).appendChild(e)}e.textContent='📷 '+m;e.scrollIntoView({behavior:'smooth',block:'center'})}
+let cv=null,cx=null,vid=null,dt=null;
+function vcode(){return S?h(JSON.stringify(S.st.map(x=>x.L))+S.n+S.t+SECRET).slice(0,6):'------'}
+function stamp(){if(!cx||!vid)return;try{cx.drawImage(vid,0,0,320,240)}catch(e){}
+ const lab=S&&S.cur?'S'+(S.cur.s+1)+'-Q'+(S.st[S.cur.s].qi+1):'END',tm=new Date().toLocaleTimeString('en-GB'),t='ID:'+vcode()+'  '+lab+'  '+tm;
+ cx.fillStyle='rgba(0,0,0,.65)';cx.fillRect(0,0,320,20);cx.fillRect(0,220,320,20);cx.fillStyle='#fff';cx.font='bold 13px monospace';cx.textAlign='left';cx.fillText(t,6,14);cx.fillText(t,6,234);
+ cx.save();cx.globalAlpha=.28;cx.translate(160,125);cx.rotate(-.35);cx.textAlign='center';cx.font='bold 30px monospace';cx.fillText(vcode(),0,0);cx.restore()}
+function mkCanvasStream(){cv=document.createElement('canvas');cv.width=320;cv.height=240;cx=cv.getContext('2d');vid=document.createElement('video');vid.muted=true;vid.playsInline=true;vid.srcObject=stream;vid.play().catch(()=>{});clearInterval(dt);dt=setInterval(stamp,100);return cv.captureStream(10)}
+async function startCam(){if(!CAM)return true;camErr='';
+ try{if(!navigator.mediaDevices||!window.MediaRecorder)throw {name:'Unsupported'};
+  stream=await Promise.race([navigator.mediaDevices.getUserMedia({video:{width:{ideal:320},height:{ideal:240},facingMode:'user'},audio:false}),new Promise((_,j)=>setTimeout(()=>j({name:'NotAllowedError'}),20000))]);
+  const mt=['video/webm;codecs=vp8','video/webm','video/mp4'].find(t=>MediaRecorder.isTypeSupported(t));
+  rec=new MediaRecorder(mkCanvasStream(),{...(mt?{mimeType:mt}:{}),videoBitsPerSecond:150000});chunks=[];vsaved=false;
+  rec.ondataavailable=e=>{if(e.data&&e.data.size)chunks.push(e.data)};rec.start(5000);
+  let c=$('#cam');if(!c){c=document.createElement('div');c.id='cam';c.innerHTML='<video id=pv autoplay muted playsinline></video><span>● REC</span>';document.body.appendChild(c)}
+  const v=$('#pv');v.srcObject=stream;v.play().catch(()=>{});
+  stream.getVideoTracks()[0].onended=()=>{if(!stream)return;stream=null;if(S){S.cg=(S.cg||0)+1;S.cgc=1;save();route()}};
+  return true}catch(e){stream=null;rec=null;camErr=camMsg(e);return false}}
+function finishCam(){if(!stream)return;const st=stream;stream=null;stamp();setTimeout(()=>{try{if(rec&&rec.state!=='inactive')rec.stop()}catch(e){}clearInterval(dt);st.getTracks().forEach(t=>{t.onended=null;t.stop()})},600);const c=$('#cam');if(c)c.remove()}
+function dlVideo(){if(!chunks.length)return alert('فیلمی برای ذخیره وجود ندارد (احتمالاً صفحه بسته یا دوباره باز شده بود).');
+ const type=(rec&&rec.mimeType)||'video/webm',bl=new Blob(chunks,{type}),a=document.createElement('a');a.href=URL.createObjectURL(bl);a.download='film-'+(S?S.n.replace(/\s+/g,'-'):'student')+(type.includes('mp4')?'.mp4':'.webm');document.body.appendChild(a);a.click();a.remove();vsaved=true;setTimeout(()=>URL.revokeObjectURL(a.href),8000)}
+const vbtn=()=>CAM&&rec?`<button class=go onclick="dlVideo()">📹 ذخیره‌ی فیلم برای معلم</button><p class=sm>فیلم را ذخیره کن و همراه کد نتیجه برای معلم بفرست. روی فیلم یک کد چاپ شده که باید با کد نتیجه بخواند؛ پس فیلم دیگری قبول نیست.</p>`:'';
+function camGate(){paint(`<div class=card><div class=mas>📷</div><h2>دوربین باید روشن باشد</h2><div class=bub>دوربین قطع شده یا صفحه دوباره باز شده است. برای ادامه‌ی بازی، دوربین را فعال کن.</div><button class=go onclick="camOn()">📷 فعال‌کردن دوربین</button></div>`)}
+async function camOn(){const b=document.querySelector('.go');if(b)b.textContent='⏳ منتظر اجازه‌ی دوربین...';if(await startCam()){if(!S.cgc)S.cg=(S.cg||0)+1;S.cgc=0;save();route()}else{if(b)b.textContent='📷 فعال‌کردن دوربین';showErr(camErr)}}
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&S&&S.cur){S.tab=(S.tab||0)+1;save()}});
+addEventListener('beforeunload',e=>{if(CAM&&chunks.length&&!vsaved&&S&&S.st.every(x=>x.s!=='open')){e.preventDefault();e.returnValue=''}});
+function gate(){paint(`<div class=card><div class=mas>🧑‍🚀</div><h1 onclick="logo()">سفر ریاضی ششم</h1><div class=bub>سلام فرمانده کوچولو! من کاپیتان عدد هستم 🌟 با هم ۴ سیاره‌ی ریاضی را فتح می‌کنیم!</div><p>اسم و فامیلت را بنویس. <b>بعد از شروع قابل تغییر نیست!</b></p><input id=nm maxlength=40 placeholder="نام و نام خانوادگی"><label class=cons><input type=checkbox id=cs>📷 قبول دارم که در حین بازی دوربین روشن باشد و از من فیلم گرفته شود تا معلوم شود تقلب نمی‌کنم. فیلم فقط روی همین دستگاه ذخیره می‌شود و خودم برای معلم می‌فرستم.</label><button class=go onclick="start()">پرواز کنیم! 🚀</button><div class=chips><span>🪐 ۴ سیاره</span><span>❓ ۲۰ سؤال</span><span>⏱ ۱ دقیقه برای هر سؤال</span><span>❤️ ۳ جان در هر مرحله</span><span>⭐ هر سؤال ۱ نمره</span><span>📷 دوربین روشن</span></div></div>`)}
+let lg=0;function logo(){if(++lg>=5){lg=0;location.hash='#teacher';route()}}
+async function start(){const n=$('#nm').value.trim().replace(/\s+/g,' ');if(n.length<3)return alert('نام و نام خانوادگی را کامل بنویس');
+ if(CAM){if(!$('#cs').checked)return alert('برای شروع باید اجازه‌ی فیلم‌برداری را تأیید کنی');const gb=document.querySelector('.go');if(gb)gb.textContent='⏳ منتظر اجازه‌ی دوربین...';if(!(await startCam())){if(gb)gb.textContent='پرواز کنیم! 🚀';return showErr(camErr)}}
+ S={n,t:Date.now(),st:T.map(()=>({s:'open',qi:0,lv:LIVES,sc:0,L:[]})),cur:null,seen:0};save();beep(523,.12,'triangle',.2);beep(784,.2,'triangle',.2,.12);bgm();map()}
+function map(){clearInterval(tk);if(S.st.every(s=>s.s!=='open'))finishCam();const sc=total(),dn=S.st.filter(s=>s.s==='done').length,over=S.st.every(s=>s.s!=='open'),mood=over?(sc>=18?'🏆':sc>=12?'🤩':'😎'):'🧑‍🚀',msg=over?(sc>=18?'تو یک نابغه‌ی ریاضی هستی!':sc>=12?'خیلی عالی بود! یک‌کم دیگه تمرین!':'ماموریت تمام شد؛ دوباره تمرین کن تا قوی‌تر بشی!'):'یک سیاره انتخاب کن و پرواز کن!';
+ const stars=over?`<div class=stars>${'⭐'.repeat(Math.round(sc/4))}</div>`:'';
+ paint(`<div class=card><div class=mas>${mood}</div><h2>${S.n}</h2><div class=bub>${msg}</div>${stars}<div class=pts>⭐ نمره: ${fa(sc)} از ۲۰</div><div class=prog><i style="width:${dn*25}%"></i><em>${fa(dn)} از ۴ سیاره</em></div>${S.tamper?'<p class=bad>⚠️ اطلاعات ذخیره‌شده دستکاری شده بود.</p>':''}<div class=planets>${T.map((t,i)=>{const s=S.st[i],st=s.s==='done'?'✅ فتح شد':s.s==='locked'?'🔒 قفل شد':s.qi?`ادامه (${fa(s.qi)}/۵)`:'ورود به سیاره';return `<button class="pl ${s.s}" style="--c:${t[2]}" ${s.s!=='open'?'disabled':''} onclick="enter(${i})"><span class=em>${t[0]}</span><span class=tx><b>سیاره ${fa(i+1)}</b><small>${t[1]}</small><i>${st} ${'❤️'.repeat(s.lv)}</i></span></button>`}).join('')}</div>${over?vbtn():''}<button class=go onclick="codeView()">🔐 کد نتیجه برای معلم</button></div>`);if(over&&dn)boom(12)}
+function enter(i){beep(440,.1,'triangle',.2);beep(660,.15,'triangle',.2,.1);S.st[i].qi===0?lesson(i,0):begin(i)}
+function lesson(i,p){clearInterval(tk);const t=T[i],n=t[3].length;
+ paint(`<div class=card style="--c:${t[2]}"><div class=mas>${t[0]}</div><h2>درس‌نامه: ${t[1]}</h2><div class=pgs>${t[3].map((_,k)=>`<u class="${k===p?'on':''}"></u>`).join('')}</div><div class=lesson style="--c:${t[2]}">${t[3][p]}</div><div class=nav>${p?`<button class=sec onclick="lesson(${i},${p-1})">→ قبلی</button>`:''}${p<n-1?`<button class=go onclick="beep(660,.1,'triangle',.2);lesson(${i},${p+1})">بعدی ←</button>`:`<button class=go onclick="begin(${i})">شروع سؤال‌ها 🚀</button>`}</div><button class=sec onclick="map()">بازگشت به نقشه</button></div>`)}
+function begin(i){S.cur={s:i,t0:now()};save();quiz()}
+function quiz(){clearInterval(tk);const{s:i}=S.cur,st=S.st[i],q=T[i][4][st.qi],tf=q[1].length===2;lock=false;
+ const dots=[0,1,2,3,4].map(k=>`<u class="${k<st.qi?'on':k===st.qi?'cur':''}"></u>`).join('');
+ paint(`<div class=card style="--c:${T[i][2]}"><div class=qt><span>${T[i][0]} ${T[i][1]}</span><span class=hearts id=hr>${'❤️'.repeat(st.lv)}${'🖤'.repeat(LIVES-st.lv)}</span></div><div class=bar><i id=br></i></div><div class=dots>${dots}</div><div>سؤال ${fa(st.qi+1)} از ۵<span class=tm id=tm></span></div><h2 class=q>${q[0]}</h2><div class="ops${tf?' tf':''}">${q[1].map((o,k)=>`<button class="op o${k}" data-s="${'ABCD'[k]}" onclick="ans(${k})">${tf?(k?'❌ ':'✅ '):''}${o}</button>`).join('')}</div><div id=fb></div></div>`);
+ let ls=99;tk=setInterval(()=>{const r=TL*1000-(now()-S.cur.t0);$('#br').style.width=Math.max(0,r/(TL*10))+'%';const sec=Math.max(0,Math.ceil(r/1000)),tm=$('#tm');tm.textContent='⏱ '+fa(sec);tm.className='tm'+(sec<=10?' hot':'');
+  if(sec<=10&&sec!==ls&&r>0)beep(sec<=3?880:660,.12,'square',.07);ls=sec;if(r<=0)fin(-1)},200)}
+function ans(k){if(!lock)fin(k)}
+function fin(k){if(lock)return;lock=true;clearInterval(tk);const i=S.cur.s,st=S.st[i],q=T[i][4][st.qi],ms=Math.min(TL*1000,now()-S.cur.t0),ok=k===q[2];
+ st.L.push([i*5+st.qi,k,ms]);let msg,kind;
+ if(ok){st.sc++;kind='ok';msg=pick(OKM)+' +۱ نمره';beep(660,.15,'triangle',.2);beep(880,.15,'triangle',.2,.15);beep(1320,.25,'triangle',.2,.3);say('آفرین پسر');boom()}
+ else{st.lv--;kind='bad';beep(200,.35,'sawtooth',.12);say('اشکال نداره، بیشتر تلاش کن');msg=k<0?'⌛ وقت تمام شد! یک جان از دست رفت. جواب درست: '+q[1][q[2]]:'💪 اشکال نداره، بیشتر تلاش کن! جواب درست: '+q[1][q[2]];const hr=$('#hr');if(hr)hr.classList.add('hit')}
+ st.qi++;if(st.lv<=0){st.s='locked';msg+=' — جان‌هایت تمام شد و این سیاره قفل شد.'}else if(st.qi>=NQ){st.s='done';if(ok)boom(26);msg+=' 🪐 سیاره تمام شد!'}
+ S.cur=null;save();
+ const ops=document.querySelectorAll('.op');if(ops[k]&&!ok)ops[k].classList.add('wrong');if(ops[q[2]])ops[q[2]].classList.add('right');
+ const f=$('#fb');f.className=kind;f.innerHTML=msg+`<div class=why>💡 یادگیری: ${q[3]}</div><button class=go onclick="nxt(${i})">ادامه ←</button>`}
+function nxt(i){const st=S.st[i];if(st.s==='open'){S.cur={s:i,t0:now()};save();quiz()}else map()}
+/* crypto */
+const enc=s=>new TextEncoder().encode(s),b64=u=>btoa(String.fromCharCode(...u)).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,''),ub64=s=>Uint8Array.from(atob(s.replace(/-/g,'+').replace(/_/g,'/')),c=>c.charCodeAt(0));
+async function key(){return crypto.subtle.importKey('raw',await crypto.subtle.digest('SHA-256',enc(SECRET)),'AES-GCM',false,['encrypt','decrypt'])}
+async function sha(s){const b=await crypto.subtle.digest('SHA-256',enc(s));return[...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,'0')).join('')}
+async function mk(){const L=S.st.map(s=>s.L),p={n:S.n,s:S.t,t:Date.now(),k:S.tamper?1:0,v:S.tab||0,g:S.cg||0,L};p.c=h(JSON.stringify(L)+S.n+S.t+(S.tab||0)+'|'+(S.cg||0)+SECRET);const iv=crypto.getRandomValues(new Uint8Array(12)),ct=new Uint8Array(await crypto.subtle.encrypt({name:'AES-GCM',iv},await key(),enc(JSON.stringify(p))));const o=new Uint8Array(12+ct.length);o.set(iv);o.set(ct,12);return 'MP6.'+b64(o)}
+async function rd(c){c=c.trim();if(!c.startsWith('MP6.'))throw 0;const o=ub64(c.slice(4));return JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:'AES-GCM',iv:o.slice(0,12)},await key(),o.slice(12))))}
+function sim(L){let sc=0,lv=LIVES,s='open',n=0;for(const[g,k,ms]of L){const ok=k===T[Math.floor(g/5)][4][g%5][2];if(ok)sc++;else{lv--}n++;if(lv<=0)s='locked'}if(s==='open'&&n>=NQ)s='done';return{s,sc}}
+async function codeView(){let c='';try{c=await mk()}catch(e){c='این مرورگر از رمزگذاری پشتیبانی نمی‌کند.'}
+ paint(`<div class=card><div class=mas>📦</div><h2>کد نتیجه‌ی تو</h2><div class=bub>این کد را کپی کن و برای معلم بفرست!</div><textarea id=cc readonly rows=6>${c}</textarea><button class=go onclick="navigator.clipboard.writeText($('#cc').value).then(()=>this.textContent='کپی شد ✅',()=>{$('#cc').select();document.execCommand('copy')})">📋 کپی کد</button><button class=sec onclick="map()">بازگشت</button></div>`)}
+/* teacher */
+function tdata(){try{return JSON.parse(store.get('m6_t')||'[]')}catch(e){return[]}}
+async function teacher(){clearInterval(tk);
+ if(!window.tok){app().innerHTML=`<div class=card><div class=mas>👩‍🏫</div><h2>پنل معلم</h2><input id=pw type=password placeholder="رمز" onkeydown="if(event.key==='Enter')chk()"><button class=go onclick="chk()">ورود</button><button class=sec onclick="location.hash='';route()">بازگشت</button></div>`;return}
+ const d=tdata().sort((a,b)=>b.sc-a.sc),n=d.length,sm=d.reduce((a,r)=>a+r.sc,0),mx=d.reduce((a,r)=>Math.max(a,r.sc),0),sus=d.filter(r=>!r.ok||r.v||r.g).length,md=['🥇','🥈','🥉'];
+ app().innerHTML=`<div class=card><div class=mas>👩‍🏫</div><h2>پنل معلم</h2><p class=sm>کدهای بچه‌ها را بچسبان (هر کد در یک خط).</p><textarea id=pc rows=4 placeholder="کدها اینجا"></textarea><button class=go onclick="add()">🔍 بررسی و ثبت کدها</button><div id=tr></div><div class=stats><div><b>${fa(n)}</b>دانش‌آموز</div><div><b>${fa(n?Math.round(sm/n*10)/10:0)}</b>میانگین</div><div><b>${fa(mx)}</b>بالاترین</div><div><b>${fa(sus)}</b>مشکوک</div></div><div class=tw><table><tr><th>نام</th>${T.map((t,i)=>`<th>${t[0]}</th>`).join('')}<th>نمره از ۲۰</th><th>📱 خروج از صفحه</th><th>📷 قطع دوربین</th><th>🔑 کد فیلم</th><th>اعتبار</th></tr>${d.map((r,i)=>`<tr><td>${md[i]||fa(i+1)} ${r.n.replace(/</g,'&lt;')}</td>${r.st.map(x=>`<td>${x==='done'?'✅':x==='locked'?'🔒':'…'}</td>`).join('')}<td>${fa(r.sc)}</td><td>${r.v?'⚠️ '+fa(r.v):'✔️'}</td><td>${r.g?'⚠️ '+fa(r.g):'✔️'}</td><td dir=ltr>${r.vc||''}</td><td>${r.ok?'✔️':'⚠️ '+r.w}</td></tr>`).join('')}</table></div><button class=go onclick="exh()">📄 خروجی HTML</button><button class=sec onclick="cp()">کپی جدول</button><button class=sec onclick="if(confirm('همه‌ی نتیجه‌ها پاک شود؟')){store.set('m6_t','[]');teacher()}">پاک کردن</button><button class=sec onclick="rst()">🔄 شروع دوباره‌ی بازی روی این دستگاه</button><button class=sec onclick="window.tok=0;location.hash='';route()">خروج</button></div>`}
+function rst(){if(!confirm('بازی و فیلم همین دستگاه پاک شود و از اول شروع شود؟ (نتیجه‌های ثبت‌شده در پنل معلم پاک نمی‌شود)'))return;finishCam();chunks=[];rec=null;mem=null;store.set('m6_s','null');S=null;window.tok=0;location.hash='';route()}
+async function chk(){let ok=false;try{ok=(await sha($('#pw').value+SECRET))===TPH}catch(e){}if(ok){window.tok=1;teacher()}else{alert('رمز درست نیست');$('#pw').value=''}}
+async function add(){const ls=$('#pc').value.split(/\s+/).filter(Boolean),d=tdata();let bad=0;
+ for(const c of ls){try{const p=await rd(c),r=p.L.map(sim),w=[];if(p.c!==h(JSON.stringify(p.L)+p.n+p.s+(p.v||0)+'|'+(p.g||0)+SECRET))w.push('امضا');if(p.k)w.push('دستکاری');if(p.L.some(l=>l.length>5||l.some(e=>e[2]>TL*1000||e[2]<0)))w.push('زمان');
+  const o={n:p.n,k:p.n+p.s,st:r.map(x=>x.s),sc:r.reduce((a,x)=>a+x.sc,0),ok:!w.length,w:w.join('،'),t:p.t,v:p.v||0,g:p.g||0,vc:h(JSON.stringify(p.L)+p.n+p.s+SECRET).slice(0,6)},i=d.findIndex(x=>x.k===o.k);if(i<0)d.push(o);else if(d[i].t<=o.t)d[i]=o}catch(e){bad++}}
+ store.set('m6_t',JSON.stringify(d));await teacher();if(bad)$('#tr').textContent=fa(bad)+' کد نامعتبر بود.'}
+function cp(){const d=tdata();navigator.clipboard.writeText(d.map(r=>[r.n,...r.st,r.sc,r.v||0,r.g||0,r.vc||'',r.ok?'ok':r.w].join('\t')).join('\n'))}
+function exh(){const d=tdata().sort((a,b)=>b.sc-a.sc);if(!d.length)return alert('هنوز نتیجه‌ای ثبت نشده است');const e=x=>String(x).replace(/&/g,'&amp;').replace(/</g,'&lt;'),n=d.length,sm=d.reduce((a,r)=>a+r.sc,0),mx=d.reduce((a,r)=>Math.max(a,r.sc),0),md=['🥇','🥈','🥉'];
+ const rows=d.map((r,i)=>`<tr><td>${md[i]||fa(i+1)}</td><td>${e(r.n)}</td>${r.st.map(x=>`<td>${x==='done'?'✅':x==='locked'?'🔒':'…'}</td>`).join('')}<td><b>${fa(r.sc)}</b></td><td>${r.v?'⚠️ '+fa(r.v):'✔️'}</td><td>${r.g?'⚠️ '+fa(r.g):'✔️'}</td><td dir=ltr>${r.vc||''}</td><td>${r.ok?'✔️ معتبر':'⚠️ '+e(r.w)}</td></tr>`).join('');
+ const html=`<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>نتایج سفر ریاضی ششم</title><style>body{font-family:Vazirmatn,Tahoma,sans-serif;margin:0;background:#f4f1ff;color:#1b1040}header{background:linear-gradient(90deg,#ff4f8b,#ffb800,#2de2e6);padding:14px;text-align:center;font-weight:900}main{max-width:900px;margin:0 auto;padding:16px}h1{text-align:center}.s{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:12px 0}.s div{background:#fff;border:3px solid #7c5cff;border-radius:16px;padding:6px 18px;text-align:center}.s b{display:block;font-size:1.5rem;color:#7c5cff}table{width:100%;border-collapse:collapse;background:#fff}th,td{border:1px solid #d9d2ff;padding:6px 8px;text-align:center}th{background:#4d3bd6;color:#fff}tr:nth-child(even) td{background:#f7f5ff}.sm{text-align:center;opacity:.7;font-size:.85rem}</style></head><body><header>🎨 طراح: اکبر اللهوردی 🎨</header><main><h1>🚀 نتایج سفر ریاضی ششم</h1><div class="s"><div><b>${fa(n)}</b>دانش‌آموز</div><div><b>${fa(Math.round(sm/n*10)/10)}</b>میانگین (از ۲۰)</div><div><b>${fa(mx)}</b>بالاترین نمره</div></div><table><tr><th>رتبه</th><th>نام</th>${T.map(t=>`<th>${t[0]} ${t[1]}</th>`).join('')}<th>نمره از ۲۰</th><th>📱 خروج از صفحه</th><th>📷 قطع دوربین</th><th>🔑 کد فیلم</th><th>اعتبار</th></tr>${rows}</table><p class="sm">تاریخ تهیه: ${new Date().toLocaleString('fa-IR')}</p></main></body></html>`;
+ const bl=new Blob([html],{type:'text/html;charset=utf-8'}),a=document.createElement('a');a.href=URL.createObjectURL(bl);a.download='natayej-riazi6.html';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),4000)}
+function route(){S=load();if(location.hash==='#teacher')return teacher();if(!S)return gate();if(CAM&&!stream&&S.st.some(x=>x.s==='open'))return camGate();if(S.cur){const r=TL*1000-(now()-S.cur.t0);if(r<=0){S.cur.t0=now()-TL*1000-1;lock=false;quiz();return fin(-1)}return quiz()}map()}
+addEventListener('hashchange',route);
+addEventListener('pointerdown',()=>{if(S&&!bg)bgm()},{once:true});
+route();
+</script></body></html>
